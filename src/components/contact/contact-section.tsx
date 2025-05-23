@@ -60,7 +60,7 @@ export function ContactSection() {
                   size="lg"
                   className="w-full py-6 text-lg justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 ease-in-out group shadow-sm hover:shadow-md"
                 >
-                  <Link href={link.href} target={link.download ? "_blank" : "_blank"} rel="noopener noreferrer" aria-label={link.ariaLabel} download={link.download ? link.text.replace(/ /g, '_') + '.pdf' : undefined}>
+                  <Link href={link.href} target={link.download ? "_blank" : "_blank"} rel="noopener noreferrer" aria-label={link.ariaLabel} download={link.download ? 'MouhebSliti_Resume.pdf' : undefined}>
                     <link.icon className="mr-3 h-6 w-6 text-primary group-hover:text-accent-foreground transition-colors duration-300" />
                     {link.text}
                   </Link>
