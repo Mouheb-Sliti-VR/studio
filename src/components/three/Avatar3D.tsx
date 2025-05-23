@@ -2,8 +2,8 @@
 'use client';
 
 import { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, useGLTF, Preload, Environment } from '@react-three/drei';
+// Import R3F and Drei components from the new re-export file
+import { Canvas, useGLTF, OrbitControls, Preload, Environment } from '@/lib/r3f-exports';
 import type { Group } from 'three';
 import { Skeleton } from '@/components/ui/skeleton';
 
