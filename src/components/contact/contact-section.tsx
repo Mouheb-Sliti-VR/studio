@@ -40,7 +40,7 @@ export function ContactSection() {
   return (
     <section id="contact" className="py-16 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <Card className="max-w-lg mx-auto shadow-xl rounded-xl border border-border/70 overflow-hidden">
+        <Card className="max-w-xl mx-auto shadow-xl rounded-xl border border-border/70 overflow-hidden"> {/* Changed max-w-lg to max-w-xl */}
           <CardHeader className="text-center bg-card p-6">
             <CardTitle className="text-3xl font-bold text-primary font-poppins">
               Let's Connect
@@ -51,17 +51,17 @@ export function ContactSection() {
             </CardDescription>
           </CardHeader>
           <CardContent className="p-6 md:p-8 bg-card">
-            <div className="flex flex-wrap justify-center gap-4"> {/* Changed to flex for horizontal layout */}
+            <div className="flex flex-wrap justify-center gap-4">
               {contactLinks.map((link) => (
                 <Button
                   key={link.text}
                   asChild
                   variant="outline"
-                  size="lg" // size="lg" provides good padding
-                  className="py-3 text-base justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 ease-in-out group shadow-sm hover:shadow-md" // Removed w-full, adjusted py and text size
+                  size="lg" 
+                  className="py-3 text-base justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 ease-in-out group shadow-sm hover:shadow-md"
                 >
                   <Link href={link.href} target={link.download ? "_blank" : "_blank"} rel="noopener noreferrer" aria-label={link.ariaLabel} download={link.download ? 'MouhebSliti_Resume.pdf' : undefined}>
-                    <link.icon className="mr-2 h-5 w-5 text-primary group-hover:text-accent-foreground transition-colors duration-300" /> {/* Adjusted icon size slightly */}
+                    <link.icon className="mr-2 h-5 w-5 text-primary group-hover:text-accent-foreground transition-colors duration-300" /> 
                     {link.text}
                   </Link>
                 </Button>
