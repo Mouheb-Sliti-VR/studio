@@ -42,12 +42,7 @@ export function PortfolioItem({ project }: PortfolioItemProps) {
           <ShadCnCardDescription className="text-sm text-muted-foreground mb-3 h-20 overflow-hidden text-ellipsis">
             {project.description}
           </ShadCnCardDescription>
-          <div className="flex flex-wrap gap-2 mb-3">
-            {project.tags.slice(0, 3).map((tag) => (
-              <Badge key={tag} variant="secondary" className="text-xs">{tag}</Badge>
-            ))}
-            {project.tags.length > 3 && <Badge variant="outline" className="text-xs">+{project.tags.length - 3} more</Badge>}
-          </div>
+          {/* Tags removed from here */}
         </CardContent>
         {/* CardFooter removed as per request */}
       </Card>
