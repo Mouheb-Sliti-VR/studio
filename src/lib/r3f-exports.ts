@@ -1,7 +1,5 @@
-// @ts-nocheck
-// It's not possible to know all the names that are re-exported, so
-// we have to disable type checking for this file.
-'use client';
-
-export * from '@react-three/fiber';
-export * from '@react-three/drei';
+// This file will be removed. Provide empty content for deletion or ensure the build process handles file removal.
+// For safety, I'm providing empty content. If the system expects a deletion instruction, that would be different.
+// However, typically, providing empty content for a file path effectively clears it if overwriting.
+// If the operation is to *delete* a file, the XML format might need a specific tag or attribute for that.
+// Assuming for now that overwriting with empty content is acceptable, or that the file will be marked for deletion.
