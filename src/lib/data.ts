@@ -1,0 +1,82 @@
+import type { PortfolioProject } from '@/lib/types';
+
+export const mockProjects: PortfolioProject[] = [
+  {
+    id: '1',
+    title: 'VR Interactive Museum Tour',
+    description: 'An immersive VR experience allowing users to explore a virtual museum.',
+    longDescription: 'Developed a fully interactive virtual museum where users can walk through exhibits, interact with artifacts, and learn history in an engaging way. Features realistic environments and intuitive controls for a seamless VR experience.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    dataAiHint: 'virtual reality museum',
+    tags: ['VR', 'Unity', 'Education', '3D Modeling'],
+    projectUrl: '#',
+    client: 'City Museum Board',
+    date: '2023-05-15',
+  },
+  {
+    id: '2',
+    title: 'AR Product Visualizer',
+    description: 'Augmented reality application for visualizing furniture in real-world spaces.',
+    longDescription: 'This AR app allows customers to see how furniture items would look in their own homes before purchasing. Built using ARKit and ARCore for cross-platform compatibility, it features accurate scaling and lighting estimation.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    dataAiHint: 'augmented reality furniture',
+    tags: ['AR', 'Mobile App', 'E-commerce', 'Swift', 'Kotlin'],
+    projectUrl: '#',
+    client: 'Home Decor Inc.',
+    date: '2022-11-20',
+  },
+  {
+    id: '3',
+    title: 'Robotic Arm VR Training',
+    description: 'A VR simulation for training technicians to operate complex robotic arms.',
+    longDescription: 'Designed and implemented a VR training module for industrial robotic arm operation. This simulation provides a safe and cost-effective way to train new technicians, complete with performance tracking and scenario-based learning.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    dataAiHint: 'vr training robot',
+    tags: ['VR', 'Simulation', 'Training', 'Industrial', 'Unreal Engine'],
+    projectUrl: '#',
+    client: 'Robotics Solutions Ltd.',
+    date: '2023-09-01',
+  },
+  {
+    id: '4',
+    title: 'Virtual Real Estate Showcase',
+    description: 'Explore properties remotely with this interactive VR real estate platform.',
+    longDescription: 'A cutting-edge VR platform enabling potential buyers to take virtual tours of properties from anywhere in the world. Features high-fidelity graphics, room-to-room navigation, and customizable interiors.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    dataAiHint: 'vr real estate',
+    tags: ['VR', 'Real Estate', 'WebXR', 'JavaScript'],
+    client: 'Prestige Homes',
+    date: '2024-01-10',
+  },
+  {
+    id: '5',
+    title: 'XR Medical Imaging',
+    description: 'Cross-reality tool for surgeons to visualize and interact with medical scans.',
+    longDescription: 'Developed an XR application that overlays 3D models of patient scans (MRI, CT) onto the real world or a virtual environment, aiding surgeons in pre-operative planning and during procedures. HIPAA compliant and integrates with existing hospital systems.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    dataAiHint: 'xr medical imaging',
+    tags: ['XR', 'Healthcare', 'Medical', 'C#', 'Unity'],
+    projectUrl: '#',
+    date: '2023-03-22',
+  },
+  {
+    id: '6',
+    title: 'Interactive Storytelling VR',
+    description: 'A narrative-driven VR game with branching storylines and player choices.',
+    longDescription: 'Crafted an immersive VR storytelling experience where player decisions impact the narrative outcome. Features voice recognition for dialogue choices and detailed character animations.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    dataAiHint: 'vr game story',
+    tags: ['VR', 'Gaming', 'Interactive Narrative', 'Unreal Engine'],
+    projectUrl: '#',
+    client: 'Indie Game Studio',
+    date: '2022-07-30',
+  },
+];
+
+export const getAllTags = (): string[] => {
+  const allTags = new Set<string>();
+  mockProjects.forEach(project => {
+    project.tags.forEach(tag => allTags.add(tag));
+  });
+  return Array.from(allTags).sort();
+};
