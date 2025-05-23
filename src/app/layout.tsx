@@ -12,7 +12,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: 'Portfolio Pilot',
+  title: 'Mouheb Sliti XR Developer/ Backend Engineer',
   description: 'A portfolio for XR developers, powered by AI.',
 };
 

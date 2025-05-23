@@ -9,7 +9,7 @@ export default function HomePage() {
     <div className="space-y-16">
       <section className="text-center py-16 bg-card rounded-lg shadow-lg">
         <h1 className="text-5xl font-bold mb-4 text-primary">
-          Welcome to Portfolio Pilot
+          Welcome to Mouheb Sliti's Portfolio
         </h1>
         <p className="text-xl text-foreground/80 mb-8 max-w-2xl mx-auto">
           Discover innovative XR (VR/AR/MR) projects developed with passion and cutting-edge technology.
