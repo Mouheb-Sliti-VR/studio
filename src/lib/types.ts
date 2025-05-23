@@ -5,6 +5,7 @@ export interface PortfolioProject {
   description: string;
   longDescription?: string;
   imageUrl: string;
+  videoUrl?: string; // Added for demo video
   tags: string[];
   projectUrl?: string;
   client?: string;

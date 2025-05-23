@@ -7,6 +7,7 @@ export const mockProjects: PortfolioProject[] = [
     description: 'An immersive VR experience allowing users to explore a virtual museum.',
     longDescription: 'Developed a fully interactive virtual museum where users can walk through exhibits, interact with artifacts, and learn history in an engaging way. Features realistic environments and intuitive controls for a seamless VR experience.',
     imageUrl: 'https://placehold.co/600x400.png',
+    videoUrl: `https://placehold.co/1280x720.mp4?text=VR+Museum+Tour+Demo`,
     dataAiHint: 'virtual reality museum',
     tags: ['VR', 'Unity', 'Education', '3D Modeling'],
     projectUrl: '#',
@@ -19,6 +20,7 @@ export const mockProjects: PortfolioProject[] = [
     description: 'Augmented reality application for visualizing furniture in real-world spaces.',
     longDescription: 'This AR app allows customers to see how furniture items would look in their own homes before purchasing. Built using ARKit and ARCore for cross-platform compatibility, it features accurate scaling and lighting estimation.',
     imageUrl: 'https://placehold.co/600x400.png',
+    videoUrl: `https://placehold.co/1280x720.mp4?text=AR+Product+Visualizer+Demo`,
     dataAiHint: 'augmented reality furniture',
     tags: ['AR', 'Mobile App', 'E-commerce', 'Swift', 'Kotlin'],
     projectUrl: '#',
@@ -31,6 +33,7 @@ export const mockProjects: PortfolioProject[] = [
     description: 'A VR simulation for training technicians to operate complex robotic arms.',
     longDescription: 'Designed and implemented a VR training module for industrial robotic arm operation. This simulation provides a safe and cost-effective way to train new technicians, complete with performance tracking and scenario-based learning.',
     imageUrl: 'https://placehold.co/600x400.png',
+    videoUrl: `https://placehold.co/1280x720.mp4?text=Robotic+Arm+VR+Training+Demo`,
     dataAiHint: 'vr training robot',
     tags: ['VR', 'Simulation', 'Training', 'Industrial', 'Unreal Engine'],
     projectUrl: '#',
@@ -43,6 +46,7 @@ export const mockProjects: PortfolioProject[] = [
     description: 'Explore properties remotely with this interactive VR real estate platform.',
     longDescription: 'A cutting-edge VR platform enabling potential buyers to take virtual tours of properties from anywhere in the world. Features high-fidelity graphics, room-to-room navigation, and customizable interiors.',
     imageUrl: 'https://placehold.co/600x400.png',
+    videoUrl: `https://placehold.co/1280x720.mp4?text=Virtual+Real+Estate+Demo`,
     dataAiHint: 'vr real estate',
     tags: ['VR', 'Real Estate', 'WebXR', 'JavaScript'],
     client: 'Prestige Homes',
@@ -54,6 +58,7 @@ export const mockProjects: PortfolioProject[] = [
     description: 'Cross-reality tool for surgeons to visualize and interact with medical scans.',
     longDescription: 'Developed an XR application that overlays 3D models of patient scans (MRI, CT) onto the real world or a virtual environment, aiding surgeons in pre-operative planning and during procedures. HIPAA compliant and integrates with existing hospital systems.',
     imageUrl: 'https://placehold.co/600x400.png',
+    videoUrl: `https://placehold.co/1280x720.mp4?text=XR+Medical+Imaging+Demo`,
     dataAiHint: 'xr medical imaging',
     tags: ['XR', 'Healthcare', 'Medical', 'C#', 'Unity'],
     projectUrl: '#',
@@ -65,6 +70,7 @@ export const mockProjects: PortfolioProject[] = [
     description: 'A narrative-driven VR game with branching storylines and player choices.',
     longDescription: 'Crafted an immersive VR storytelling experience where player decisions impact the narrative outcome. Features voice recognition for dialogue choices and detailed character animations.',
     imageUrl: 'https://placehold.co/600x400.png',
+    videoUrl: `https://placehold.co/1280x720.mp4?text=Interactive+Storytelling+Demo`,
     dataAiHint: 'vr game story',
     tags: ['VR', 'Gaming', 'Interactive Narrative', 'Unreal Engine'],
     projectUrl: '#',
@@ -72,5 +78,3 @@ export const mockProjects: PortfolioProject[] = [
     date: '2022-07-30',
   },
 ];
-
-// The getAllTags function has been removed as it's no longer needed.
