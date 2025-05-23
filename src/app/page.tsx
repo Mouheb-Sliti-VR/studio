@@ -22,8 +22,10 @@ export default function HomePage() {
               </p>
             </div>
             <p className="text-lg sm:text-xl text-foreground/80 max-w-xl mx-auto md:mx-0">
-              Discover innovative XR (VR/AR/MR) projects developed with passion and cutting-edge technology.
-              Let&apos;s build the future of immersive experiences together.
+              As a Computer Science Engineer, I'm passionate about creating immersive XR experiences, leveraging expertise in Unity development for VR/AR platforms. 
+              I specialize in designing event-driven backends for connected games and applications, seamlessly integrating real-time interactions.
+              My full-stack capabilities span from conceptualizing game art and features to developing robust backends, and deploying scalable solutions using Docker, GitLab CI/CD, and GCP. 
+              With a focus on R&D and experience deploying to platforms like Oculus Quest, I continuously push XR technology boundaries, monitoring performance with tools like Unity Analytics, Grafana, and GCP metrics to deliver innovative and efficient designs for gaming and beyond.
             </p>
             <div className="pt-2">
               <Link href="#portfolio">
