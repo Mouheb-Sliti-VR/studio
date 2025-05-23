@@ -21,11 +21,10 @@ export default function HomePage() {
                 XR Developer / Backend Engineer
               </p>
             </div>
-            <p className="text-lg sm:text-xl text-foreground/80 max-w-xl mx-auto md:mx-0">
-              As a Computer Science Engineer, I'm passionate about creating immersive XR experiences, leveraging expertise in Unity development for VR/AR platforms. 
-              I specialize in designing event-driven backends for connected games and applications, seamlessly integrating real-time interactions.
-              My full-stack capabilities span from conceptualizing game art and features to developing robust backends, and deploying scalable solutions using Docker, GitLab CI/CD, and GCP. 
-              With a focus on R&D and experience deploying to platforms like Oculus Quest, I continuously push XR technology boundaries, monitoring performance with tools like Unity Analytics, Grafana, and GCP metrics to deliver innovative and efficient designs for gaming and beyond.
+            <p className="text-base sm:text-lg text-foreground/80 max-w-xl mx-auto md:mx-0">
+              As a Computer Science Engineer, I am passionate about crafting immersive XR experiences, leveraging my expertise in Unity development for VR/AR platforms. My skill set extends to designing robust, event-driven backends that power connected games and applications with seamless real-time interactions.
+              I approach projects with a full-stack perspective, from conceptualizing game art and features to developing the backend infrastructure, and finally deploying and monitoring scalable solutions using Docker, GitLab CI/CD, and GCP.
+              With a strong focus on R&D and hands-on experience deploying to platforms like Oculus Quest, I am dedicated to pushing the boundaries of XR technology. I ensure operational excellence by monitoring performance with tools such as Unity Analytics, Grafana, and GCP metrics, always aiming for innovative, efficient, and eco-friendly designs for gaming and beyond.
             </p>
             <div className="pt-2">
               <Link href="#portfolio">
