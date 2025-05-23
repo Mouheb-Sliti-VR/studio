@@ -1,8 +1,10 @@
+
 "use server";
 
 import { z } from 'zod';
 import { suggestTags as suggestTagsFlow, type SuggestTagsInput } from '@/ai/flows/suggest-tags';
 import type { PortfolioProject } from './types';
+import { mockProjects } from './data'; // Import mockProjects
 
 // Contact Form
 const ContactFormSchema = z.object({
@@ -44,11 +46,17 @@ export async function submitContactForm(
 
 
 // Project Form
-const ProjectFormSchema = z.object({
+// No longer parsing tags as comma-separated string from this schema,
+// as tags are handled separately by the form's state.
+const ProjectFormActionSchema = z.object({
   title: z.string().min(3, "Title is too short"),
   description: z.string().min(10, "Description is too short"),
-  imageUrl: z.string().url("Invalid image URL").optional().or(z.literal('')),
-  tags: z.string().optional(), // Comma-separated tags
+  longDescription: z.string().optional(),
+  imageUrl: z.string().url("Invalid URL format.").or(z.literal('')).optional(),
+  projectUrl: z.string().url("Invalid URL format.").or(z.literal('')).optional(),
+  client: z.string().optional(),
+  date: z.string().optional(),
+  // tags are part of PortfolioProject but come from form state, not directly from FormData here
 });
 
 
@@ -66,18 +74,24 @@ export async function handleSuggestTags(description: string): Promise<string[]> 
   }
 }
 
-// This is a placeholder for saving a project. In a real app, this would interact with a database.
+// This function now accepts the full project data including tags from the form state.
 export async function saveProject(projectData: Omit<PortfolioProject, 'id' | 'dataAiHint'>): Promise<{ success: boolean; message: string; project?: PortfolioProject }> {
+  // Validate core fields (optional: zod schema could be used here too if desired for runtime check on projectData)
   console.log("Saving project:", projectData);
-  // Simulate saving
+
   const newProject: PortfolioProject = {
     ...projectData,
-    id: Math.random().toString(36).substring(7),
-    imageUrl: projectData.imageUrl || 'https://placehold.co/600x400.png',
-    dataAiHint: 'custom project'
+    id: Math.random().toString(36).substring(7), // Generate a simple unique ID
+    imageUrl: projectData.imageUrl || 'https://placehold.co/600x400.png', // Default image if none provided
+    // videoUrl will be part of projectData if provided by the form
+    dataAiHint: projectData.title.toLowerCase().split(' ').slice(0,2).join(' ') || 'custom project' // Basic AI hint from title
   };
-  // In a real app, you'd add this to your data store.
-  // For mockProjects, this won't persist across requests or server restarts.
-  // mockProjects.unshift(newProject); 
-  return { success: true, message: "Project saved successfully (simulated).", project: newProject };
+
+  // Add the new project to the beginning of the mockProjects array
+  mockProjects.unshift(newProject); 
+  
+  // In a real app with a database, you would also revalidate the path to the homepage
+  // to ensure the new data is fetched, e.g., revalidatePath('/');
+
+  return { success: true, message: "Project saved successfully (simulated, in-memory).", project: newProject };
 }
