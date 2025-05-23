@@ -11,24 +11,24 @@ interface ContactLink {
   text: string;
   icon: React.ElementType;
   ariaLabel: string;
-  download?: boolean; // Added for CV download
+  download?: boolean; 
 }
 
 const contactLinks: ContactLink[] = [
   {
-    href: "mailto:mouheb.sliti@example.com", // Replace with your actual email
+    href: "mailto:mouheb.sliti@example.com", 
     text: "Email Me",
     icon: Mail,
     ariaLabel: "Send an email to Mouheb Sliti",
   },
   {
-    href: "https://www.linkedin.com/in/mouhebsliti/", // Replace with your actual LinkedIn
+    href: "https://www.linkedin.com/in/mouhebsliti/", 
     text: "LinkedIn",
     icon: Linkedin,
     ariaLabel: "View Mouheb Sliti's LinkedIn profile",
   },
   {
-    href: "/MouhebSliti_Resume.pdf", // You'll need to add MouhebSliti_Resume.pdf to your /public folder
+    href: "/MouhebSliti_Resume.pdf", 
     text: "Download CV",
     icon: DownloadCloud,
     ariaLabel: "Download Mouheb Sliti's CV",
@@ -51,17 +51,17 @@ export function ContactSection() {
             </CardDescription>
           </CardHeader>
           <CardContent className="p-6 md:p-8 bg-card">
-            <div className="space-y-4">
+            <div className="flex flex-wrap justify-center gap-4"> {/* Changed to flex for horizontal layout */}
               {contactLinks.map((link) => (
                 <Button
                   key={link.text}
                   asChild
                   variant="outline"
-                  size="lg"
-                  className="w-full py-6 text-lg justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 ease-in-out group shadow-sm hover:shadow-md"
+                  size="lg" // size="lg" provides good padding
+                  className="py-3 text-base justify-center hover:bg-accent hover:text-accent-foreground transition-all duration-300 ease-in-out group shadow-sm hover:shadow-md" // Removed w-full, adjusted py and text size
                 >
                   <Link href={link.href} target={link.download ? "_blank" : "_blank"} rel="noopener noreferrer" aria-label={link.ariaLabel} download={link.download ? 'MouhebSliti_Resume.pdf' : undefined}>
-                    <link.icon className="mr-3 h-6 w-6 text-primary group-hover:text-accent-foreground transition-colors duration-300" />
+                    <link.icon className="mr-2 h-5 w-5 text-primary group-hover:text-accent-foreground transition-colors duration-300" /> {/* Adjusted icon size slightly */}
                     {link.text}
                   </Link>
                 </Button>
