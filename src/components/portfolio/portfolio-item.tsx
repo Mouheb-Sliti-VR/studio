@@ -8,10 +8,10 @@ import { ExternalLink } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  // DialogDescription, // No longer used directly here for client/date
 } from "@/components/ui/dialog";
 
 
@@ -39,7 +39,7 @@ export function PortfolioItem({ project }: PortfolioItemProps) {
         </DialogTrigger>
         <CardContent className="flex-grow p-4">
           <CardTitle className="text-xl mb-2">{project.title}</CardTitle>
-          <ShadCnCardDescription className="text-sm text-muted-foreground mb-3 overflow-hidden text-ellipsis">
+          <ShadCnCardDescription className="text-sm text-muted-foreground mb-3 overflow-hidden text-ellipsis h-[60px]">
             {project.description}
           </ShadCnCardDescription>
           {/* Tags removed from here */}
@@ -47,17 +47,17 @@ export function PortfolioItem({ project }: PortfolioItemProps) {
         {/* CardFooter removed as per request */}
       </Card>
 
-      <DialogContent className="sm:max-w-2xl md:max-w-3xl lg:max-w-4xl max-h-[90vh] flex flex-col p-0 overflow-y-auto">
+      <DialogContent className="sm:max-w-2xl md:max-w-3xl lg:max-w-4xl max-h-[90vh] flex flex-col p-0">
         <DialogHeader className="p-6 pb-4 sticky top-0 bg-background z-10 border-b border-border">
           <DialogTitle className="text-2xl md:text-3xl">{project.title}</DialogTitle>
           {(project.client || project.date) && (
-            <DialogDescription className="mt-1">
-              {project.client && <p className="text-sm text-muted-foreground">Client: {project.client}</p>}
-              {project.date && <p className="text-sm text-muted-foreground">Date: {project.date}</p>}
-            </DialogDescription>
+            <div className="mt-1 text-sm text-muted-foreground"> {/* Replaced DialogDescription and nested <p> */}
+              {project.client && <div>Client: {project.client}</div>}
+              {project.date && <div>Date: {project.date}</div>}
+            </div>
           )}
         </DialogHeader>
-        <div className="grid gap-6 p-6"> {/* Removed flex-grow and overflow-y-auto here */}
+        <div className="grid gap-6 p-6 flex-grow overflow-y-auto">
           <div className="aspect-video w-full rounded-lg overflow-hidden bg-muted border border-border shadow-inner">
             <video
               controls
