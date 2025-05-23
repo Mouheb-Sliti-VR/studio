@@ -39,7 +39,7 @@ export function PortfolioItem({ project }: PortfolioItemProps) {
         </DialogTrigger>
         <CardContent className="flex-grow p-4">
           <CardTitle className="text-xl mb-2">{project.title}</CardTitle>
-          <ShadCnCardDescription className="text-sm text-muted-foreground mb-3 h-20 overflow-hidden text-ellipsis">
+          <ShadCnCardDescription className="text-sm text-muted-foreground mb-3 overflow-hidden text-ellipsis">
             {project.description}
           </ShadCnCardDescription>
           {/* Tags removed from here */}
