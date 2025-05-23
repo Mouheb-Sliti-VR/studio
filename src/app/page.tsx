@@ -1,9 +1,6 @@
 
 import { PortfolioGrid } from '@/components/portfolio/portfolio-grid';
 import { ContactSection } from '@/components/contact/contact-section';
-import { Button } from '@/components/ui/button';
-import { ArrowDown } from 'lucide-react';
-import Link from 'next/link';
 import { ClientAvatar3D } from '@/components/layout/client-avatar-3d';
 
 
@@ -22,14 +19,6 @@ export default function HomePage() {
             <p className="text-base text-foreground/80 max-w-xl mx-auto md:mx-0">
               Driven by a passion for exploration and continuous learning, I actively seek out new technologies and challenges beyond my core expertise. My rare combination of creative vision, deep technical skills, and end-to-end ownership makes me a uniquely versatile engineer capable of delivering impactful, eco-conscious experiences that perform seamlessly across platforms.
             </p>
-            <div className="pt-2">
-              <Link href="#portfolio">
-                <Button size="lg" className="shadow-md hover:shadow-lg transition-shadow">
-                  Explore Projects
-                  <ArrowDown className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-            </div>
           </div>
           <div className="w-full h-[250px] md:h-[350px] flex items-center justify-center mt-8 md:mt-0"> {/* Reduced height */}
             <ClientAvatar3D />
