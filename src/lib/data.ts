@@ -73,10 +73,4 @@ export const mockProjects: PortfolioProject[] = [
   },
 ];
 
-export const getAllTags = (): string[] => {
-  const allTags = new Set<string>();
-  mockProjects.forEach(project => {
-    project.tags.forEach(tag => allTags.add(tag));
-  });
-  return Array.from(allTags).sort();
-};
+// The getAllTags function has been removed as it's no longer needed.
