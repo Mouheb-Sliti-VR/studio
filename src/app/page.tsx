@@ -4,13 +4,7 @@ import { ContactSection } from '@/components/contact/contact-section';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-
-// Dynamically import the 3D Avatar component
-const DynamicAvatar3D = dynamic(() => import('@/components/three/Avatar3D'), {
-  ssr: false, // Ensure it's client-side only
-  loading: () => <div className="w-full h-[300px] md:h-[400px] bg-secondary/30 rounded-lg flex items-center justify-center"><p className="text-muted-foreground">Loading 3D Model...</p></div>,
-});
+import { ClientAvatar3D } from '@/components/layout/client-avatar-3d';
 
 
 export default function HomePage() {
@@ -41,7 +35,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="w-full h-[300px] md:h-[400px] flex items-center justify-center mt-8 md:mt-0">
-            <DynamicAvatar3D />
+            <ClientAvatar3D />
           </div>
         </div>
       </section>
