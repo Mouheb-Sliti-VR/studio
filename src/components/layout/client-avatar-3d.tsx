@@ -8,7 +8,7 @@ export function ClientAvatar3D() {
   // 2. Go to your model's page, click "Embed".
   // 3. Copy the src URL from the iframe code and paste it here.
   // Example placeholder URL (replace with your actual Sketchfab model embed link):
-  const sketchfabEmbedUrl = "https://sketchfab.com/models/442c548d94744641ba279ae94b5f45ec/embed?autospin=1&autostart=1&ui_theme=dark&camera=0";
+  const sketchfabEmbedUrl = "https://sketchfab.com/models/ff78537d3c0341d6a329584ed731b698/embed";
 
   return (
     <div 
