@@ -1,5 +1,6 @@
+
 import { PortfolioGrid } from '@/components/portfolio/portfolio-grid';
-import { ContactForm } from '@/components/contact/contact-form';
+import { ContactSection } from '@/components/contact/contact-section'; // New import
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
@@ -9,8 +10,11 @@ export default function HomePage() {
     <div className="space-y-16">
       <section className="text-center py-16 bg-card rounded-lg shadow-lg">
         <h1 className="text-5xl font-bold mb-4 text-primary">
-          Welcome to Mouheb Sliti's Portfolio
+          Mouheb Sliti
         </h1>
+        <p className="text-3xl font-semibold mb-4 text-primary/90">
+          XR Developer / Backend Engineer
+        </p>
         <p className="text-xl text-foreground/80 mb-8 max-w-2xl mx-auto">
           Discover innovative XR (VR/AR/MR) projects developed with passion and cutting-edge technology.
           Let&apos;s build the future of immersive experiences together.
@@ -28,7 +32,7 @@ export default function HomePage() {
         <PortfolioGrid />
       </section>
 
-      <ContactForm />
+      <ContactSection /> {/* Replaced ContactForm with ContactSection */}
     </div>
   );
 }
