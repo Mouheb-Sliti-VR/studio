@@ -4,77 +4,101 @@
 
 @layer base {
   :root {
-    --background: 250 30% 12%; /* Very Dark Indigo/Purple */
-    --foreground: 200 80% 85%; /* Light Cyan Blue */
+    --background: 225 7% 84%; /* Light gray */
+    --foreground: 235 18% 23%; /* Deep navy blue */
 
-    --card: 250 30% 18%; /* Slightly lighter Dark Indigo/Purple */
-    --card-foreground: 200 80% 85%; /* Light Cyan Blue */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 235 18% 23%; /* Deep navy blue */
 
-    --popover: 250 30% 18%;
-    --popover-foreground: 200 80% 85%;
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 235 18% 23%; /* Deep navy blue */
 
-    --primary: 275 100% 60%; /* Neon Purple */
-    --primary-foreground: 0 0% 100%; /* White */
+    --primary: 235 18% 23%; /* Deep navy blue - Used for primary text, buttons etc. */
+    --primary-foreground: 0 0% 100%; /* White - For text on primary elements */
 
-    --secondary: 195 90% 55%; /* Neon Light Blue */
-    --secondary-foreground: 250 30% 12%; /* Dark, matching background */
+    --secondary: 225 7% 92%; /* Lighter gray, for subtle secondary elements or backgrounds */
+    --secondary-foreground: 235 18% 23%; /* Deep navy blue */
 
-    --muted: 250 20% 30%; /* Muted Dark Indigo */
-    --muted-foreground: 200 50% 70%; /* Muted Light Cyan Blue */
+    --muted: 225 7% 65%; /* Mid-gray for muted text */
+    --muted-foreground: 225 7% 45%; /* Darker gray for text on muted */
 
-    --accent: 195 100% 50%; /* Neon Light Blue for accents */
+    --accent: 288 83% 54%; /* Electric purple - For highlights, links, interactive elements */
     --accent-foreground: 0 0% 100%; /* White */
 
-    --destructive: 0 80% 60%; /* Neon Red-ish Pink */
-    --destructive-foreground: 0 0% 100%; /* White */
+    --destructive: 0 72% 51%; /* Standard red */
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 250 25% 35%; /* Subtle border */
-    --input: 250 25% 22%; /* Input background */
-    --ring: 195 100% 50%; /* Neon Light Blue for focus rings */
+    --border: 225 7% 78%; /* Slightly darker gray for borders */
+    --input: 0 0% 100%; /* White for input backgrounds */
+    /* --input-border: 225 7% 70%; /* Custom input border, or rely on --border */
+    --ring: 288 83% 54%; /* Electric purple for focus rings */
 
     --radius: 0.5rem;
 
-    --chart-1: 275 100% 60%; /* Neon Purple */
-    --chart-2: 195 90% 55%; /* Neon Light Blue */
-    --chart-3: 300 100% 70%; /* Neon Pink */
-    --chart-4: 210 100% 65%; /* Bright Blue */
-    --chart-5: 180 80% 50%; /* Teal */
+    /* Chart colors */
+    --chart-1: 235 18% 23%;
+    --chart-2: 288 83% 54%;
+    --chart-3: 220 60% 60%;
+    --chart-4: 300 70% 65%;
+    --chart-5: 230 30% 40%;
+
+    /* Sidebar specific colors for light theme */
+    --sidebar-background: 225 7% 90%; /* Slightly off-white/very light gray */
+    --sidebar-foreground: 235 18% 23%; /* Deep navy blue */
+    --sidebar-primary: 288 83% 54%; /* Electric purple for primary actions in sidebar */
+    --sidebar-primary-foreground: 0 0% 100%; /* White */
+    --sidebar-accent: 288 83% 45%; /* Darker Purple for hover/active states in sidebar */
+    --sidebar-accent-foreground: 0 0% 100%; /* White */
+    --sidebar-border: 225 7% 78%;
+    --sidebar-ring: 288 83% 54%;
   }
 
   .dark {
-    --background: 260 40% 8%; /* Even Darker Purple/Indigo */
-    --foreground: 190 100% 90%; /* Bright Aqua */
+    --background: 235 18% 15%; /* Very Dark Navy Blue */
+    --foreground: 225 7% 84%; /* Light Gray */
 
-    --card: 260 40% 12%;
-    --card-foreground: 190 100% 90%;
+    --card: 235 18% 20%; /* Dark Navy Blue */
+    --card-foreground: 225 7% 84%;
 
-    --popover: 260 40% 12%;
-    --popover-foreground: 190 100% 90%;
+    --popover: 235 18% 20%;
+    --popover-foreground: 225 7% 84%;
 
-    --primary: 280 100% 65%; /* Brighter Neon Purple */
-    --primary-foreground: 0 0% 100%;
+    --primary: 288 83% 65%; /* Brighter Electric Purple for dark mode primary */
+    --primary-foreground: 235 18% 10%; /* Very dark for text on bright purple */
 
-    --secondary: 200 100% 60%; /* Brighter Neon Cyan */
-    --secondary-foreground: 260 40% 8%; /* Darker, matching .dark background */
-    
-    --muted: 260 30% 25%;
-    --muted-foreground: 190 70% 75%;
+    --secondary: 235 18% 25%;
+    --secondary-foreground: 225 7% 84%;
 
-    --accent: 200 100% 55%; /* Bright Neon Cyan */
-    --accent-foreground: 0 0% 0%; /* Black for high contrast */
+    --muted: 235 18% 30%;
+    --muted-foreground: 225 7% 65%;
 
-    --destructive: 0 85% 65%; 
+    --accent: 288 83% 54%; /* Electric purple */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 60% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 260 30% 30%;
-    --input: 260 30% 18%;
-    --ring: 280 100% 65%; /* Brighter Neon Purple for focus */
+    --border: 235 18% 28%;
+    --input: 235 18% 22%;
+    /* --input-border: 235 18% 35%; */
+    --ring: 288 83% 65%;
 
-    --chart-1: 280 100% 65%;
-    --chart-2: 200 100% 60%;
-    --chart-3: 310 100% 70%;
-    --chart-4: 220 100% 70%;
-    --chart-5: 190 90% 55%;
+    /* Chart colors for dark mode */
+    --chart-1: 225 7% 84%;
+    --chart-2: 288 83% 65%;
+    --chart-3: 220 70% 70%;
+    --chart-4: 300 80% 75%;
+    --chart-5: 230 40% 50%;
+
+    /* Sidebar specific colors for dark theme */
+    --sidebar-background: 235 18% 12%; /* Even darker for sidebar */
+    --sidebar-foreground: 225 7% 84%; /* Light Gray */
+    --sidebar-primary: 288 83% 65%; /* Brighter Electric Purple */
+    --sidebar-primary-foreground: 235 18% 10%;
+    --sidebar-accent: 288 83% 55%; /* Slightly different purple for hover/active */
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 235 18% 25%;
+    --sidebar-ring: 288 83% 65%;
   }
 }
 
@@ -84,9 +108,9 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-geist-sans);
+    font-family: var(--font-inter); /* Default body font */
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold;
+    @apply font-poppins font-semibold; /* Default heading font */
   }
 }
