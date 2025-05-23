@@ -10,9 +10,7 @@ export function Header() {
           <span>Mouheb Sliti XR Developer/ Backend Engineer</span>
         </Link>
         <nav>
-          <Link href="/admin" className="text-foreground hover:text-primary transition-colors">
-            Manage Projects
-          </Link>
+          {/* "Manage Projects" link removed */}
         </nav>
       </div>
     </header>
