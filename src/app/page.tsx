@@ -14,10 +14,10 @@ export default function HomePage() {
               About Me
             </h2>
             <p className="text-base text-foreground/80 max-w-xl mx-auto md:mx-0">
-              I'm a Unity Certified Professional Developer and Computer Science Engineer specializing in immersive 3D and XR experiences and simulations. I lead the full development lifecycle—from crafting interactive gameplay to building scalable, event-driven backends and multiplayer servers. Fully embracing the DevOps philosophy, I handle everything from coding and testing to CI/CD, cloud deployment on GCP, and performance monitoring.
+              I’m a versatile Computer Science Engineer and Unity Certified Professional Developer passionate about immersive XR experiences and scalable, event-driven backends. I take projects from concept to deployment — building interactive 3D applications, architecting multiplayer servers, and managing CI/CD pipelines on GCP.
             </p>
             <p className="text-base text-foreground/80 max-w-xl mx-auto md:mx-0">
-              Driven by a passion for exploration and continuous learning, I actively seek out new technologies and challenges beyond my core expertise. My rare combination of creative vision, deep technical skills, and end-to-end ownership makes me a uniquely versatile engineer capable of delivering impactful, eco-conscious experiences that perform seamlessly across platforms.
+              Driven by curiosity and a love for continuous learning, I stay ahead of emerging technologies and embrace challenges beyond my core stack. My strength lies in blending technical depth, creative problem-solving, and a DevOps mindset to deliver reliable, high-performance solutions across platforms.
             </p>
           </div>
           <div className="w-full h-[250px] md:h-[350px] flex items-center justify-center mt-8 md:mt-0"> {/* Reduced height */}
