@@ -1,5 +1,3 @@
-# Firebase Studio
+# My Portfolio
 
-This is a NextJS starter in Firebase Studio.
-
-To get started, take a look at src/app/page.tsx.
+This is a portfolio showcasing some of my latest projects 
