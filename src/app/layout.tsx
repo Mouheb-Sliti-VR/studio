@@ -36,8 +36,8 @@ export default function RootLayout({
       <body className={cn(inter.variable, poppins.variable, "min-h-screen flex flex-col antialiased font-inter")}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <Header />
